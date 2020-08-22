@@ -1,0 +1,152 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap'); 
+body{
+    background-image: url('../images/first.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Rowdies', cursive;
+}
+
+.add h2{
+    font-family: 'Rowdies', cursive;
+    margin-top: 0;
+    color: rgb(128, 5, 5);
+}
+
+.climate-detect{
+    display: none;
+    background-color: rgb(224, 150, 13);
+    font-family: 'Rowdies', cursive;
+}
+.climate-detect span h2{
+    margin-left: 5rem;
+    margin-top: -4rem;
+}
+.climate-detect span span h6{
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+.climate-detect h5{
+    margin-top: 2rem;
+}
+.thisbtn{
+    margin-left: 65rem;
+    margin-top: -3rem;
+    
+}
+/* .words:before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: 30px;
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent #efe4e4;
+}
+.words{
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem 1rem 5rem;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#d9eaf3),color-stop(4%,#fff))0 4px;
+    background-size: 100% 3rem;
+    position: relative;
+    line-height: 3rem;
+} */
+#list{
+    padding-left: 9px;
+    padding-top: 3px;
+    margin-left: 22rem;
+    list-style: none; 
+    margin-top: 1rem;
+    font-size: 16pt;
+    border: 0px inset #23e2e2;
+    border-radius: 5px;
+    background-color: #23e2e2;
+    width: 46rem;
+    height: 38px;
+    display: inline-flex;
+    font-weight: 800;
+}
+.input-box-area{
+    margin-top: 8rem;
+    margin-left: 25rem;
+}
+#exampleFormControlInput1{
+    font-size: 18pt; 
+    height: 42px;
+     width : 28rem; 
+}
+.good{
+    display: none;
+}
+#logo{
+    padding-left: 10rem;
+    margin-left: 25rem;
+}
+.list-group .listele{
+    margin-top: 2rem;
+    margin-left: 20rem;
+    width: 500px;
+    background-color: #22e7eedc;
+}
+.first{
+    width: fit-content;
+    margin-left: 69rem;
+    margin-top: -2rem;
+}
+.second{
+    width: fit-content;
+    margin-left: 72rem;
+    margin-top: -2rem; 
+}
+.down{
+    margin-top: 19rem;
+    margin-left: 50rem;
+
+}
+@media only screen and (max-width: 550px) {
+    .input-box-area{
+        margin-left: 0.7rem;
+    }
+    .add h2{
+        margin-left: 2px;
+        margin-top: 0;
+    }
+    .add h2 img{
+        width: 60px;
+        height:70px;
+        margin-left: -1rem;
+    }
+    .myadd{
+        margin-left: 1rem!important;
+        width: 23rem;
+    }
+    .list-group .listele{
+        width: 400px;
+    }
+    .first{
+        margin-left: 25.6rem;
+    }
+    .second{
+        margin-left: 27.7rem;
+    }
+    #list{
+        margin-left: 10px; 
+        width: 25rem;
+        height: 38px;
+    }
+    .down{
+        margin-top: 15rem;
+        margin-left: 1rem;
+        font-size: 10px;
+    
+    }
+    .thisbtn{
+        margin-left: 18rem;
+        margin-top: -2px;
+    }
+    
+}
