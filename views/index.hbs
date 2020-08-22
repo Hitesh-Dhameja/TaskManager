@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/48acccd4fb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type = "text/css" href="./css/style.css">
+    <title>To-do app</title>
+  </head>
+  <body>
+    <div class="add container-fluid">
+      <h2><span><img src="./images/logo.png" width="120px" height="60px"></span>Task Manager</h2>
+      <div class="dropdown">
+        <button class="thisbtn btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Welcome!
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="btn dropdown-item" role="button" href="#" data-toggle="modal" data-target="#myModal">About</a>
+          <a class="btn dropdown-item" role="button" href="#" data-toggle="modal" data-target="#exampleModal1">Contact Us</a>
+          <a id="check1" class="btn dropdown-item" role="button" href="http://localhost:3000/index/weather?location=Ulhasnagar" data-toggle="modal" data-target="#weather">Know Weather</a>
+          <a class="btn dropdown-item" href="/">LogOut</a>
+
+          
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">About Us</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+      
+          <div class="modal-body">
+            <p><pre> <h3>TASK MANAGER WEBSITE:</h3>
+              <h5>Salient Features:
+   1)You can store all the daily tasks as an reminder here.
+   2)It has the voice typing accessbility for the situations in which
+   typing the task is not possible.
+   3)You can store,delete and update the task at any point of time.
+   4)Moreover,you can also bifergurate the task based on pending and completed so 
+   that you get an clear idea of your work for the near future.
+   5)Also,you can check for the weather for the day and decide your task on that basis.
+   ***For more info contact us****</h5></pre>
+                        </p>
+          </div>
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Email Id:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="emailButton" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="modal fade" id="weather" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                  </div>
+                  <div class="modal-body">
+
+                    <h1>Weather</h1>
+                    <form method="GET" action="/weather" id="form" class="navbar-form " role="search">
+              
+                      <input type="text" id="input" class="form-control" name="location1" placeholder="Search">
+                      <button type="submit" id="check" class="btn btn-warning">Check</button>
+                
+                    </form>
+                    <div id="climate-detect" class="climate-detect">
+                      <img id="img" alt="weather logo"><span><h2 id="city">{{city}}</h2><span><h6 id="stateM">{{state}},{{country}}</h6></span>
+                      <h5 id="Temperture">Temperature: {{temperature}}*C</h5>
+                      <h5 id="climate">Climate: {{Climate}}</h5>
+                      <h5 id="timezone">TimeZone: {{timezone}}</h5>
+                      
+                    </div>
+                    
+
+
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+    <div class="container input-box-area">
+        <form method="GET" action="/index" class="abc form-inline mt-4 ml-4">
+            <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Task..." x-webkit-speech>
+            <button id="#add" name="Add" class="myadd btn btn-outline-success my-2 my-sm-0" type="submit" value=Add{{email1}}>Add</button>
+            <button id="#delete" name="delete" class="myadd btn btn-outline-danger my-2 my-sm-0" type="submit" value=delete{{email1}}>Delete All</button>
+        </form>
+    </div>
+    <form method="GET" action="/index">
+      <ul id ="list1" class="list-group">
+        {{#each yourtasks}}
+          <li class="list-group-item" id="list">{{this.work}}</li>
+        {{/each}}
+      </ul>
+    </form>
+      
+      <footer class="down">
+          <h6>Copyright HD-Task-Manager @2020.All rights are reserved</h6>
+      </footer>
+
+    <script src="js/todo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
