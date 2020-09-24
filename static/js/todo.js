@@ -16,7 +16,7 @@ check.addEventListener('input',(e)=>{
 checkbtn.addEventListener('click',(e)=>{
     e.preventDefault();
     console.log(place)
-    fetch('http://localhost:3000/weather?location1='+place).then((response)=>{
+    fetch('https://localhost:3000/weather?location1='+place).then((response)=>{
         response.json().then((data)=>{
             if(data.error){console.log(data.error)}
             else{
