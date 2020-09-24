@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const request = require('request');
 const path = require('path');
-var url = 'http://api.weatherstack.com/current?access_key=3077f467c693e46535dbf083f43a77af&query=';
+var url = 'https://api.weatherstack.com/current?access_key=3077f467c693e46535dbf083f43a77af&query=';
 var hbs = require('hbs');
 const fs = require('fs');
 
@@ -127,7 +127,7 @@ app.use(express.static(director))
 
 app.get('/weather',(req,res)=>{
     loc = req.query.location1
-    url = 'http://api.weatherstack.com/current?access_key=3077f467c693e46535dbf083f43a77af&query='+loc
+    url = 'https://api.weatherstack.com/current?access_key=3077f467c693e46535dbf083f43a77af&query='+loc
     console.log(loc)
     request({url:url},(error,response)=>{
         var data = JSON.parse(response.body)
